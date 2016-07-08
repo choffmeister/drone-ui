@@ -66,7 +66,7 @@ module.exports = {
         collapseWhitespace: true,
         minifyCSS: true
       },
-      goTemplate: process.env.NODE_ENV !== 'production'
+      goTemplate: process.env.NODE_ENV === 'production'
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
